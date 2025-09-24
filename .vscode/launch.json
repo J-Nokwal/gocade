@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch game (WebAssembly)",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${workspaceFolder}/cmd/example-game/example-game.go",
+            "env": {
+                "GOOS": "js",
+                "GOARCH": "wasm"
+            },
+            "args": [],
+            "buildFlags": "-tags=wasm",
+            "preLaunchTask": "build-wasm"
+        }
+    ]
+}

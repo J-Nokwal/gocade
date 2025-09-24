@@ -1,0 +1,45 @@
+/go-2d-engine/  (or your chosen engine name)
+├── cmd/
+│   ├── engine-cli/      # Optional CLI tools for engine management
+│   │   └── main.go
+│   └── example-game/    # Example game using your engine
+│       └── main.go
+├── internal/           # Engine internals (not exposed to users)
+│   ├── core/
+│   │   ├── game.go     # Game loop and timing
+│   │   ├── scene.go    # Scene management
+│   │   └── state.go    # Game state management
+│   ├── graphics/
+│   │   ├── renderer.go # Rendering interface
+│   │   ├── canvas/    # Canvas-based renderer
+│   │   ├── webgl/     # WebGL renderer
+│   │   └── shaders/    # Shader assets
+│   ├── input/
+│   │   ├── keyboard.go
+│   │   ├── mouse.go
+│   │   └── touch.go
+│   ├── math/
+│   │   ├── vector.go
+│   │   ├── matrix.go
+│   │   └── geometry.go
+│   └── wasm/
+│       ├── bridge.go   # JS/WASM interop
+│       └── loader.go  # WASM initialization
+├── pkg/                # Public engine API
+│   ├── engine.go       # Main entry point
+│   ├── config.go       # Engine configuration
+│   ├── assets/         # Asset management
+│   └── ecs/            # Entity-component system (optional)
+├── assets/             # Default engine assets
+│   ├── fonts/
+│   ├── textures/
+│   └── sounds/
+├── web/                # Web-specific resources
+│   ├── static/
+│   │   ├── index.html  # Default HTML template
+│   │   └── wasm.js     # WASM loader
+│   └── build.sh        # WASM build script
+├── go.mod
+├── go.sum
+├── Makefile            # Build automation
+└── README.md
