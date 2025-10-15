@@ -1,9 +1,19 @@
 {
-        "gopls": {
-            "build.buildFlags": ["-tags=js,wasm"],
-            "env": {
-                "GOOS": "js",
-                "GOARCH": "wasm"
-            }
-        }
+  "gopls": {
+    "build.buildFlags": ["-tags=js,wasm"],
+    "env": {
+      "GOOS": "js",
+      "GOARCH": "wasm"
+    }
+  },
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        // Run whenever any file is saved
+        "match": ".*",
+        // "cmd": "echo '${fileBasename}' saved."
+        "cmd": "bash cmd/example-game/build.sh"
+      }
+    ]
+  }
 }

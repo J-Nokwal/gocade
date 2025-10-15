@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Go WASM",
+      "type": "shell",
+      "command": "${workspaceFolder}/cmd/example-game/build.sh",
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
